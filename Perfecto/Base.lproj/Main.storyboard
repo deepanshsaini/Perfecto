@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+        </array>
+        <array key="DIRTYEGO.TTF">
+            <string>DirtyEgo</string>
+        </array>
+        <array key="KGPrimaryWhimsy.ttf">
+            <string>KGPrimaryWhimsy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Perfecto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="03" translatesAutoresizingMaskIntoConstraints="NO" id="HFi-Nl-FRc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfecto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBk-hb-BdX">
+                                <rect key="frame" x="16" y="40" width="343" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="i4E-hX-uXn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="89"/>
+                                <color key="textColor" red="0.51758885383605957" green="0.47248369455337524" blue="0.46531027555465698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wp-Li-vdY">
+                                <rect key="frame" x="16" y="604" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Kvo-hH-mUH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lHa-WP-C1a" kind="show" id="JAc-IJ-8ky"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HFi-Nl-FRc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0X4-Er-yyB"/>
+                            <constraint firstItem="8wp-Li-vdY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7nc-94-kai"/>
+                            <constraint firstItem="yBk-hb-BdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DtS-WN-zmG"/>
+                            <constraint firstItem="HFi-Nl-FRc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ifz-Yd-z6Q"/>
+                            <constraint firstItem="yBk-hb-BdX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="K4N-2m-Ttw"/>
+                            <constraint firstItem="HFi-Nl-FRc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Muk-En-gcu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8wp-Li-vdY" secondAttribute="bottom" constant="18" id="PEV-fV-jN4"/>
+                            <constraint firstItem="HFi-Nl-FRc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="q7U-5H-ujf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yBk-hb-BdX" secondAttribute="trailing" constant="16" id="tfo-fW-qed"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8wp-Li-vdY" secondAttribute="trailing" constant="16" id="vTu-Ow-ttR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ContinueBtn" destination="8wp-Li-vdY" id="Rrh-Xv-HNj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="446.25" y="77.112676056338032"/>
+        </scene>
+        <!--Perfecto Voice RecorderVC-->
+        <scene sceneID="JRe-9k-6ne">
+            <objects>
+                <viewController id="kt7-QG-fKB" customClass="PerfectoVoiceRecorderVC" customModule="Perfecto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qvt-Lj-Bjv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="07" translatesAutoresizingMaskIntoConstraints="NO" id="pqj-LE-UlQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfecto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIt-1r-ZMR">
+                                <rect key="frame" x="60" y="20" width="255" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hga-eg-yVl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="64"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHX-AJ-hb1">
+                                <rect key="frame" x="107.5" y="253.5" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="ndu-qK-zrs"/>
+                                    <constraint firstAttribute="width" constant="160" id="pwe-Qd-9tR"/>
+                                </constraints>
+                                <state key="normal" image="speak">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordAudio:" destination="kt7-QG-fKB" eventType="touchUpInside" id="sGr-Of-kIy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCL-Yn-IJZ">
+                                <rect key="frame" x="119.5" y="265.5" width="136" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="136" id="U9t-sL-ai0"/>
+                                    <constraint firstAttribute="width" constant="136" id="Xee-Pe-68b"/>
+                                </constraints>
+                                <state key="normal" image="Pause">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAudio:" destination="kt7-QG-fKB" eventType="touchUpInside" id="SG6-kC-TxJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdJ-rQ-Mo3">
+                                <rect key="frame" x="70" y="283.5" width="235" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9vB-P4-Dws"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="53"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="e4p-Ug-D20" kind="show" identifier="segue" id="NAe-DS-Rdf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KN-DX-u3B">
+                                <rect key="frame" x="16" y="25" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3WJ-jA-oVq"/>
+                                    <constraint firstAttribute="width" constant="40" id="Bwe-3U-npP"/>
+                                </constraints>
+                                <state key="normal" image="BackBtn"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="kt7-QG-fKB" eventType="touchUpInside" id="PSd-JY-UM2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press above to record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCX-eF-cua">
+                                <rect key="frame" x="16" y="597" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Orh-uA-Mia"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="37"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press above to pause" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3S4-oa-EMw">
+                                <rect key="frame" x="16" y="597" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8XP-38-eTP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="37"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kUJ-FI-JI7" firstAttribute="trailing" secondItem="yIt-1r-ZMR" secondAttribute="trailing" constant="60" id="3Z2-0o-lGC"/>
+                            <constraint firstItem="MdJ-rQ-Mo3" firstAttribute="centerX" secondItem="qvt-Lj-Bjv" secondAttribute="centerX" id="3dy-rF-b52"/>
+                            <constraint firstItem="vHX-AJ-hb1" firstAttribute="centerX" secondItem="qvt-Lj-Bjv" secondAttribute="centerX" id="5c7-ba-MU1"/>
+                            <constraint firstItem="yIt-1r-ZMR" firstAttribute="top" secondItem="kUJ-FI-JI7" secondAttribute="top" id="6Nv-fK-ldH"/>
+                            <constraint firstItem="kUJ-FI-JI7" firstAttribute="trailing" secondItem="NCX-eF-cua" secondAttribute="trailing" constant="16" id="Bxv-mT-t8Y"/>
+                            <constraint firstItem="pqj-LE-UlQ" firstAttribute="trailing" secondItem="kUJ-FI-JI7" secondAttribute="trailing" id="IBS-Yq-cOu"/>
+                            <constraint firstItem="iCL-Yn-IJZ" firstAttribute="centerY" secondItem="qvt-Lj-Bjv" secondAttribute="centerY" id="IUO-Wx-gwV"/>
+                            <constraint firstItem="0KN-DX-u3B" firstAttribute="top" secondItem="kUJ-FI-JI7" secondAttribute="top" constant="5" id="Jzh-1p-2gq"/>
+                            <constraint firstItem="yIt-1r-ZMR" firstAttribute="leading" secondItem="kUJ-FI-JI7" secondAttribute="leading" constant="60" id="PLH-Hb-Ep1"/>
+                            <constraint firstItem="0KN-DX-u3B" firstAttribute="leading" secondItem="kUJ-FI-JI7" secondAttribute="leading" constant="16" id="U1h-db-zuS"/>
+                            <constraint firstItem="pqj-LE-UlQ" firstAttribute="top" secondItem="qvt-Lj-Bjv" secondAttribute="top" id="Uj7-jb-AUn"/>
+                            <constraint firstItem="pqj-LE-UlQ" firstAttribute="bottom" secondItem="kUJ-FI-JI7" secondAttribute="bottom" id="Ur4-32-M4N"/>
+                            <constraint firstItem="3S4-oa-EMw" firstAttribute="leading" secondItem="kUJ-FI-JI7" secondAttribute="leading" constant="16" id="Wlt-SH-fcm"/>
+                            <constraint firstItem="NCX-eF-cua" firstAttribute="leading" secondItem="kUJ-FI-JI7" secondAttribute="leading" constant="16" id="eOC-nA-oMW"/>
+                            <constraint firstItem="kUJ-FI-JI7" firstAttribute="bottom" secondItem="NCX-eF-cua" secondAttribute="bottom" constant="20" id="gsu-4k-mGr"/>
+                            <constraint firstItem="kUJ-FI-JI7" firstAttribute="trailing" secondItem="3S4-oa-EMw" secondAttribute="trailing" constant="16" id="hAZ-IL-lji"/>
+                            <constraint firstItem="vHX-AJ-hb1" firstAttribute="centerY" secondItem="qvt-Lj-Bjv" secondAttribute="centerY" id="huh-yO-Hcf"/>
+                            <constraint firstItem="kUJ-FI-JI7" firstAttribute="bottom" secondItem="3S4-oa-EMw" secondAttribute="bottom" constant="20" id="sNk-Ty-CYZ"/>
+                            <constraint firstItem="pqj-LE-UlQ" firstAttribute="leading" secondItem="kUJ-FI-JI7" secondAttribute="leading" id="uTP-a7-8VJ"/>
+                            <constraint firstItem="MdJ-rQ-Mo3" firstAttribute="centerY" secondItem="qvt-Lj-Bjv" secondAttribute="centerY" id="ySn-Y2-4xb"/>
+                            <constraint firstItem="iCL-Yn-IJZ" firstAttribute="centerX" secondItem="qvt-Lj-Bjv" secondAttribute="centerX" id="zNV-q0-Iv5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kUJ-FI-JI7"/>
+                    </view>
+                    <connections>
+                        <outlet property="momentOfTruth" destination="MdJ-rQ-Mo3" id="dYK-7f-nox"/>
+                        <outlet property="pause" destination="3S4-oa-EMw" id="8JX-Ux-MKV"/>
+                        <outlet property="record" destination="NCX-eF-cua" id="axp-Hq-BSJ"/>
+                        <outlet property="recordButton" destination="vHX-AJ-hb1" id="UM1-0t-kVZ"/>
+                        <outlet property="stopButton" destination="iCL-Yn-IJZ" id="faT-Xk-skn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L8C-32-fdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="1392.2535211267607"/>
+        </scene>
+        <!--Perfecto Voice AnalyserVC-->
+        <scene sceneID="enj-AH-5uF">
+            <objects>
+                <viewController id="e4p-Ug-D20" customClass="PerfectoVoiceAnalyserVC" customModule="Perfecto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rsb-iJ-ANy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05" translatesAutoresizingMaskIntoConstraints="NO" id="qTe-Ce-psr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3F-Ry-XcU">
+                                <rect key="frame" x="137.5" y="467" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="OKs-Wy-8Za"/>
+                                    <constraint firstAttribute="width" constant="100" id="kLj-az-ft1"/>
+                                </constraints>
+                                <state key="normal" image="Play"/>
+                                <connections>
+                                    <action selector="playBtnPressed:" destination="e4p-Ug-D20" eventType="touchUpInside" id="HTw-WC-8fU"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hb1-e6-xaH">
+                                <rect key="frame" x="177.5" y="507" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4nv-GU-fLn">
+                                <rect key="frame" x="16" y="110" width="343" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="f4r-Ga-Yqo"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Welcome,                                                                                                                                                                                      Your voice will be analysed here and will be shown on the screen.                                                                                                                                                         Which means the better you speak the better it will be displayed.                                                                                          HIT THAT PLAY BUTTON                          </string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="Avenir-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="9" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfecto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apE-yT-oGE">
+                                <rect key="frame" x="60" y="20" width="255" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cGM-He-k33"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="64"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sks-RH-wyD">
+                                <rect key="frame" x="10" y="25" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="PTg-Ui-6dg"/>
+                                    <constraint firstAttribute="height" constant="40" id="kZ6-Rf-Im1"/>
+                                </constraints>
+                                <state key="normal" image="BackBtn"/>
+                                <connections>
+                                    <segue destination="1ns-Ck-6dC" kind="unwind" unwindAction="unwindSegue:" id="UsY-4X-4ig"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcs-Cu-D6v" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <color key="backgroundColor" red="0.75686274509999996" green="0.52156862749999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="vhj-MV-lh8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="adUnitID" value="ca-app-pub-1710641957607529/1601398811"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OS5-Zd-e3U" firstAttribute="trailing" secondItem="4nv-GU-fLn" secondAttribute="trailing" constant="16" id="0U5-Ls-qka"/>
+                            <constraint firstItem="kcs-Cu-D6v" firstAttribute="trailing" secondItem="OS5-Zd-e3U" secondAttribute="trailing" id="28r-Yi-qeU"/>
+                            <constraint firstItem="kcs-Cu-D6v" firstAttribute="leading" secondItem="OS5-Zd-e3U" secondAttribute="leading" id="3Vp-NZ-gVU"/>
+                            <constraint firstItem="hb1-e6-xaH" firstAttribute="centerY" secondItem="K3F-Ry-XcU" secondAttribute="centerY" id="DAD-6p-jxq"/>
+                            <constraint firstItem="OS5-Zd-e3U" firstAttribute="bottom" secondItem="K3F-Ry-XcU" secondAttribute="bottom" constant="100" id="E1b-wO-3Qc"/>
+                            <constraint firstItem="OS5-Zd-e3U" firstAttribute="trailing" secondItem="apE-yT-oGE" secondAttribute="trailing" constant="60" id="E1u-9R-n3H"/>
+                            <constraint firstItem="4nv-GU-fLn" firstAttribute="leading" secondItem="OS5-Zd-e3U" secondAttribute="leading" constant="16" id="E3j-jc-Qpr"/>
+                            <constraint firstItem="hb1-e6-xaH" firstAttribute="centerX" secondItem="K3F-Ry-XcU" secondAttribute="centerX" id="Erx-gi-woD"/>
+                            <constraint firstItem="qTe-Ce-psr" firstAttribute="trailing" secondItem="OS5-Zd-e3U" secondAttribute="trailing" id="FiS-ga-Qjt"/>
+                            <constraint firstItem="qTe-Ce-psr" firstAttribute="bottom" secondItem="OS5-Zd-e3U" secondAttribute="bottom" id="FpN-ic-wUt"/>
+                            <constraint firstItem="qTe-Ce-psr" firstAttribute="leading" secondItem="OS5-Zd-e3U" secondAttribute="leading" id="ITj-PG-LZX"/>
+                            <constraint firstItem="4nv-GU-fLn" firstAttribute="top" secondItem="OS5-Zd-e3U" secondAttribute="top" constant="90" id="KTS-g2-Fz7"/>
+                            <constraint firstItem="apE-yT-oGE" firstAttribute="top" secondItem="OS5-Zd-e3U" secondAttribute="top" id="VUf-tV-enR"/>
+                            <constraint firstItem="sks-RH-wyD" firstAttribute="leading" secondItem="OS5-Zd-e3U" secondAttribute="leading" constant="10" id="cIP-6x-DgH"/>
+                            <constraint firstItem="kcs-Cu-D6v" firstAttribute="bottom" secondItem="OS5-Zd-e3U" secondAttribute="bottom" id="f9s-3X-Qo8"/>
+                            <constraint firstItem="K3F-Ry-XcU" firstAttribute="centerX" secondItem="Rsb-iJ-ANy" secondAttribute="centerX" id="iB4-0X-otW"/>
+                            <constraint firstItem="sks-RH-wyD" firstAttribute="top" secondItem="OS5-Zd-e3U" secondAttribute="top" constant="5" id="sYy-xO-vQj"/>
+                            <constraint firstItem="qTe-Ce-psr" firstAttribute="top" secondItem="Rsb-iJ-ANy" secondAttribute="top" id="uua-OG-Q07"/>
+                            <constraint firstItem="apE-yT-oGE" firstAttribute="leading" secondItem="OS5-Zd-e3U" secondAttribute="leading" constant="60" id="vKj-cQ-Kq4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OS5-Zd-e3U"/>
+                    </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="hb1-e6-xaH" id="4ff-VM-AAF"/>
+                        <outlet property="bannerView" destination="kcs-Cu-D6v" id="UkF-Mo-FAT"/>
+                        <outlet property="transcriptionTextFeild" destination="4nv-GU-fLn" id="6Li-5g-7uf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kjd-tF-t9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1ns-Ck-6dC" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2047.5" y="1393.3098591549297"/>
+        </scene>
+        <!--Perfecto InitialVC-->
+        <scene sceneID="l5I-m5-vGO">
+            <objects>
+                <viewController id="lHa-WP-C1a" customClass="PerfectoInitialVC" customModule="Perfecto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MJx-N1-ibO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="04" translatesAutoresizingMaskIntoConstraints="NO" id="awN-nC-dTa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Db-ZA-d9S">
+                                <rect key="frame" x="63" y="396" width="249" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="NZd-SB-JA1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="46"/>
+                                <state key="normal" title="Learn Numbers">
+                                    <color key="titleColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="QG1-RM-VWx" kind="show" id="ub0-Vv-qqR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Q2-B0-6sv">
+                                <rect key="frame" x="44.5" y="224" width="286" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="lgb-eG-4md"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="35"/>
+                                <state key="normal" title="Improve pronouncation">
+                                    <color key="titleColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kt7-QG-fKB" kind="show" id="gJY-5o-oaE"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jr5-50-u1U" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="cTf-Ya-95c"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="NlD-qk-VMg"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="adUnitID" value="ca-app-pub-1710641957607529/1601398811"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9k-YF-80P">
+                                <rect key="frame" x="54.5" y="80" width="266" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="GDb-Ht-l9e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="47"/>
+                                <state key="normal" title="Learn Alphabets">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tiM-M0-RaL" kind="show" id="2ok-ia-7YC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jr5-50-u1U" firstAttribute="bottom" secondItem="lVG-Jr-Yh5" secondAttribute="bottom" id="CSK-JV-mhi"/>
+                            <constraint firstItem="9Db-ZA-d9S" firstAttribute="top" secondItem="8Q2-B0-6sv" secondAttribute="bottom" constant="100" id="FNt-lO-taq"/>
+                            <constraint firstItem="lVG-Jr-Yh5" firstAttribute="bottom" secondItem="awN-nC-dTa" secondAttribute="bottom" id="HfA-7L-Bjg"/>
+                            <constraint firstItem="Jr5-50-u1U" firstAttribute="leading" secondItem="lVG-Jr-Yh5" secondAttribute="leading" id="Lxn-SX-vvQ"/>
+                            <constraint firstItem="j9k-YF-80P" firstAttribute="top" secondItem="lVG-Jr-Yh5" secondAttribute="top" constant="60" id="N68-Dh-oLI"/>
+                            <constraint firstItem="8Q2-B0-6sv" firstAttribute="top" secondItem="j9k-YF-80P" secondAttribute="bottom" constant="85" id="TzT-3C-3am"/>
+                            <constraint firstItem="9Db-ZA-d9S" firstAttribute="centerX" secondItem="MJx-N1-ibO" secondAttribute="centerX" id="VIo-O8-Vlk"/>
+                            <constraint firstItem="awN-nC-dTa" firstAttribute="leading" secondItem="lVG-Jr-Yh5" secondAttribute="leading" id="cDP-cx-tZW"/>
+                            <constraint firstItem="lVG-Jr-Yh5" firstAttribute="trailing" secondItem="awN-nC-dTa" secondAttribute="trailing" id="fcV-fR-JpE"/>
+                            <constraint firstItem="Jr5-50-u1U" firstAttribute="trailing" secondItem="lVG-Jr-Yh5" secondAttribute="trailing" id="kzu-Yf-RYB"/>
+                            <constraint firstItem="awN-nC-dTa" firstAttribute="top" secondItem="MJx-N1-ibO" secondAttribute="top" id="oLv-yV-HaH"/>
+                            <constraint firstItem="j9k-YF-80P" firstAttribute="centerX" secondItem="MJx-N1-ibO" secondAttribute="centerX" id="w54-dx-4wW"/>
+                            <constraint firstItem="8Q2-B0-6sv" firstAttribute="centerX" secondItem="MJx-N1-ibO" secondAttribute="centerX" id="zSg-Nx-PsH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lVG-Jr-Yh5"/>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="Jr5-50-u1U" id="Vxb-2g-6co"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHz-VR-VUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357.5" y="76.056338028169009"/>
+        </scene>
+        <!--Perfecto AlphabetsVC-->
+        <scene sceneID="2ZU-EU-Ova">
+            <objects>
+                <viewController id="tiM-M0-RaL" customClass="PerfectoAlphabetsVC" customModule="Perfecto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jyp-FC-b8b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="06" translatesAutoresizingMaskIntoConstraints="NO" id="uc7-wK-peD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="apj-Ta-087">
+                                <rect key="frame" x="10" y="100" width="355" height="557"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="p2V-kD-cbR">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="79.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mN-nI-9zX">
+                                                <rect key="frame" x="0.0" y="0.0" width="89" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="aTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="aOC-Ro-0gB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdD-og-GMk">
+                                                <rect key="frame" x="89" y="0.0" width="88.5" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="B">
+                                                    <color key="titleColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="bTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="bMf-8a-xht"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mg-US-Q3E">
+                                                <rect key="frame" x="177.5" y="0.0" width="89" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="Kx4-Jj-8nt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVg-YM-Pjx">
+                                                <rect key="frame" x="266.5" y="0.0" width="88.5" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="D">
+                                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="13y-Mv-XNs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3q4-xU-cjm">
+                                        <rect key="frame" x="0.0" y="79.5" width="355" height="79.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUL-c0-1gP">
+                                                <rect key="frame" x="0.0" y="0.0" width="89" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="E">
+                                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="eTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="cSz-Aa-HKN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYY-co-VES">
+                                                <rect key="frame" x="89" y="0.0" width="88.5" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="F">
+                                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="FTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="nDI-Aa-k8D"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0D-7O-OQX">
+                                                <rect key="frame" x="177.5" y="0.0" width="89" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="gTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="YkE-gu-eAe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlg-na-cIs">
+                                                <rect key="frame" x="266.5" y="0.0" width="88.5" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="H">
+                                                    <color key="titleColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="hTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="FGi-f1-trY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="idD-Yy-Xxm">
+                                        <rect key="frame" x="0.0" y="159" width="355" height="79.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mo-WF-N0x">
+                                                <rect key="frame" x="0.0" y="0.0" width="89" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="I">
+                                                    <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="iTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="eQb-id-CEr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xu-Rr-UbW">
+                                                <rect key="frame" x="89" y="0.0" width="88.5" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="J">
+                                                    <color key="titleColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="jTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="EYR-po-tsC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4i-s4-EPH">
+                                                <rect key="frame" x="177.5" y="0.0" width="89" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="K">
+                                                    <color key="titleColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="kTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="Ra5-lR-UxB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9V4-lZ-hFm">
+                                                <rect key="frame" x="266.5" y="0.0" width="88.5" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="L">
+                                                    <color key="titleColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="fwU-Vg-waS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-k8-mfM">
+                                        <rect key="frame" x="0.0" y="238.5" width="355" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNh-2Z-ovn">
+                                                <rect key="frame" x="0.0" y="0.0" width="89" height="80"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="M">
+                                                    <color key="titleColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="mTapped:" destination="tiM-M0-RaL" eventType="touchDragInside" id="jyG-eo-7nW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aej-ju-ItL">
+                                                <rect key="frame" x="89" y="0.0" width="88.5" height="80"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="N">
+                                                    <color key="titleColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nTapped:" destination="tiM-M0-RaL" eventType="touchDragInside" id="Dhn-t3-jdq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbK-1K-bEZ">
+                                                <rect key="frame" x="177.5" y="0.0" width="89" height="80"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="O">
+                                                    <color key="titleColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="oTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="45Y-vx-weZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="547-VR-zva">
+                                                <rect key="frame" x="266.5" y="0.0" width="88.5" height="80"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="P">
+                                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="8aV-9k-COM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uuY-Fd-f4X">
+                                        <rect key="frame" x="0.0" y="318.5" width="355" height="79.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpN-rC-jRN">
+                                                <rect key="frame" x="0.0" y="0.0" width="89" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="Q">
+                                                    <color key="titleColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="qTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="mbc-Bf-GBF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGa-6T-zPN">
+                                                <rect key="frame" x="89" y="0.0" width="88.5" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="R">
+                                                    <color key="titleColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="Tis-SF-VEc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAH-Kz-MEW">
+                                                <rect key="frame" x="177.5" y="0.0" width="89" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="S">
+                                                    <color key="titleColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="34N-fI-vxv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nG-et-XJP">
+                                                <rect key="frame" x="266.5" y="0.0" width="88.5" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="T">
+                                                    <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="YRd-P0-E22"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fZp-cj-IpV">
+                                        <rect key="frame" x="0.0" y="398" width="355" height="79.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX6-CG-fCY">
+                                                <rect key="frame" x="0.0" y="0.0" width="89" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="U">
+                                                    <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="uTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="rQi-Un-OHf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHF-Ld-c1H">
+                                                <rect key="frame" x="89" y="0.0" width="88.5" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="V">
+                                                    <color key="titleColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="vTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="A3i-AH-a9A"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdW-rD-1cD">
+                                                <rect key="frame" x="177.5" y="0.0" width="89" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="W">
+                                                    <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="wTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="rSv-CU-ydE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NtX-4l-d74">
+                                                <rect key="frame" x="266.5" y="0.0" width="88.5" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="xTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="CBx-Ed-1mD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Hfp-Rc-JqK">
+                                        <rect key="frame" x="0.0" y="477.5" width="355" height="79.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0d-7w-8BB">
+                                                <rect key="frame" x="0.0" y="0.0" width="177.5" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="Y">
+                                                    <color key="titleColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="yTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="pck-iG-SCH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2J-LE-YwV">
+                                                <rect key="frame" x="177.5" y="0.0" width="177.5" height="79.5"/>
+                                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="68"/>
+                                                <state key="normal" title="Z">
+                                                    <color key="titleColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="zTapped:" destination="tiM-M0-RaL" eventType="touchUpInside" id="ID2-zE-q8K"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="eka-CR-49v"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfecto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqO-3h-RZN">
+                                <rect key="frame" x="60" y="20" width="255" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="jUL-Ar-Ph3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="64"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mee-ft-7um">
+                                <rect key="frame" x="10" y="36" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1wN-Hf-NGz"/>
+                                    <constraint firstAttribute="height" constant="50" id="Xdk-cu-s0g"/>
+                                </constraints>
+                                <state key="normal" image="BackBtn">
+                                    <color key="titleColor" red="0.45057958364486694" green="0.40165475010871887" blue="0.38779512047767639" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="tiM-M0-RaL" eventType="touchUpInside" id="Zvv-X7-zD6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E3p-yw-UzM" firstAttribute="trailing" secondItem="apj-Ta-087" secondAttribute="trailing" constant="10" id="1MP-z4-jkm"/>
+                            <constraint firstItem="uc7-wK-peD" firstAttribute="leading" secondItem="E3p-yw-UzM" secondAttribute="leading" id="1TZ-F6-UbW"/>
+                            <constraint firstItem="uc7-wK-peD" firstAttribute="bottom" secondItem="E3p-yw-UzM" secondAttribute="bottom" id="4lY-ZG-TJ6"/>
+                            <constraint firstItem="E3p-yw-UzM" firstAttribute="trailing" secondItem="nqO-3h-RZN" secondAttribute="trailing" constant="60" id="5oe-CT-qSf"/>
+                            <constraint firstItem="uc7-wK-peD" firstAttribute="trailing" secondItem="E3p-yw-UzM" secondAttribute="trailing" id="6Ua-ZG-pA8"/>
+                            <constraint firstItem="nqO-3h-RZN" firstAttribute="top" secondItem="E3p-yw-UzM" secondAttribute="top" id="9Fm-RT-P3F"/>
+                            <constraint firstAttribute="bottom" secondItem="apj-Ta-087" secondAttribute="bottom" constant="10" id="Ixp-9Y-84z"/>
+                            <constraint firstItem="Mee-ft-7um" firstAttribute="leading" secondItem="E3p-yw-UzM" secondAttribute="leading" constant="10" id="KeG-Ag-uA3"/>
+                            <constraint firstItem="apj-Ta-087" firstAttribute="top" secondItem="Jyp-FC-b8b" secondAttribute="top" constant="100" id="n29-en-z1E"/>
+                            <constraint firstItem="Mee-ft-7um" firstAttribute="top" secondItem="E3p-yw-UzM" secondAttribute="top" constant="16" id="qFI-JN-0rl"/>
+                            <constraint firstItem="nqO-3h-RZN" firstAttribute="leading" secondItem="E3p-yw-UzM" secondAttribute="leading" constant="60" id="tJ0-9S-sVc"/>
+                            <constraint firstItem="apj-Ta-087" firstAttribute="leading" secondItem="Jyp-FC-b8b" secondAttribute="leading" constant="10" id="uh7-lK-92y"/>
+                            <constraint firstItem="uc7-wK-peD" firstAttribute="top" secondItem="Jyp-FC-b8b" secondAttribute="top" id="vSm-1E-IZK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E3p-yw-UzM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCL-wO-uuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2359" y="-143"/>
+        </scene>
+        <!--Perfecto NumberVC-->
+        <scene sceneID="NiV-Lb-aNi">
+            <objects>
+                <viewController id="QG1-RM-VWx" customClass="PerfectoNumberVC" customModule="Perfecto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hah-nG-GcS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="06" translatesAutoresizingMaskIntoConstraints="NO" id="Buv-ma-2ue">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfecto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUX-Ds-TBj">
+                                <rect key="frame" x="60" y="20" width="255" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="GOT-D0-hg4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGPrimaryWhimsy" family="KG Primary Whimsy" pointSize="64"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="G6n-KX-RG6">
+                                <rect key="frame" x="10" y="100" width="355" height="457"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X09-lv-jyZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="152.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0Q-Cd-hkW">
+                                                <rect key="frame" x="0.0" y="0.0" width="118.5" height="152.5"/>
+                                                <fontDescription key="fontDescription" name="DirtyEgo" family="Dirty Ego" pointSize="72"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="oneTapped:" destination="QG1-RM-VWx" eventType="touchUpInside" id="PDB-ht-r1S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqT-hs-oNG">
+                                                <rect key="frame" x="118.5" y="0.0" width="118" height="152.5"/>
+                                                <fontDescription key="fontDescription" name="DirtyEgo" family="Dirty Ego" pointSize="72"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="twoTapped:" destination="QG1-RM-VWx" eventType="touchUpInside" id="J4H-IJ-zDC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJs-u2-VP6">
+                                                <rect key="frame" x="236.5" y="0.0" width="118.5" height="152.5"/>
+                                                <fontDescription key="fontDescription" name="DirtyEgo" family="Dirty Ego" pointSize="72"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="threeTapped:" destination="QG1-RM-VWx" eventType="touchUpInside" id="luy-5d-Huh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yuo-7q-Ifb">
+                                        <rect key="frame" x="0.0" y="152.5" width="355" height="152"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvN-KR-sJ8">
+                                                <rect key="frame" x="0.0" y="0.0" width="118.5" height="152"/>
+                                                <fontDescription key="fontDescription" name="DirtyEgo" family="Dirty Ego" pointSize="72"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="fourTapped:" destination="QG1-RM-VWx" eventType="touchUpInside" id="h4u-PQ-SX1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZC-eo-81E">
+                                                <rect key="frame" x="118.5" y="0.0" width="118" height="152"/>
+                                                <fontDescription key="fontDescription" name="DirtyEgo" family="Dirty Ego" pointSize="72"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="fiveTapped:" destination="QG1-RM-VWx" eventType="touchUpInside" id="GLo-gg-Nvg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQo-j2-3Ya">
+                                                <rect key="frame" x="236.5" y="0.0" width="118.5" height="152"/>
+                                                <fontDescription key="fontDescription" name="DirtyEgo" family="Dirty Ego" pointSize="72"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sixTapped:" destination="QG1-RM-VWx" eventType="touchUpInside" id="ali-kk-k0j"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GeA-uN-94K">
+                                        <rect key="frame" x="0.0" y="304.5" width="355" height="152.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOq-Bx-gP8">
+                                                <rect key="frame" x="0.0" y="0.0" width="118.5" height="152.5"/>
+                                                <fontDescription key="fontDescription" name="DirtyEgo" family="Dirty Ego" pointSize="72"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sevenTapped:" destination="QG1-RM-VWx" eventType="touchUpInside" id="jku-Zb-jR2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfZ-tn-NbT">
+                                                <rect key="frame" x="118.5" y="0.0" width="118" height="152.5"/>
+                                                <fontDescription key="fontDescription" name="DirtyEgo" family="Dirty Ego" pointSize="72"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="eightTapped:" destination="QG1-RM-VWx" eventType="touchDragInside" id="oi7-PP-xFt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIb-TO-PTj">
+                                                <rect key="frame" x="236.5" y="0.0" width="118.5" height="152.5"/>
+                                                <fontDescription key="fontDescription" name="DirtyEgo" family="Dirty Ego" pointSize="72"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nineTapped:" destination="QG1-RM-VWx" eventType="touchDragInside" id="4ad-9r-bmv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="UnX-ea-Cw0"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AP9-hc-ZTY">
+                                <rect key="frame" x="157.5" y="565" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Hq9-AZ-x7t"/>
+                                    <constraint firstAttribute="width" constant="60" id="s2C-uG-NRv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DirtyEgo" family="Dirty Ego" pointSize="72"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="zeroTapped:" destination="QG1-RM-VWx" eventType="touchUpInside" id="2ex-8z-7sg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z69-Nb-IH0">
+                                <rect key="frame" x="10" y="39" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="GTj-BW-O8A"/>
+                                    <constraint firstAttribute="width" constant="52" id="buV-As-vLa"/>
+                                </constraints>
+                                <state key="normal" image="BackBtn">
+                                    <color key="titleColor" red="0.4505795836" green="0.40165475010000001" blue="0.38779512049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="tiM-M0-RaL" eventType="touchUpInside" id="Ntp-Hw-H0P"/>
+                                    <action selector="backBtnPressed:" destination="QG1-RM-VWx" eventType="touchUpInside" id="Ui9-IR-3GD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G6n-KX-RG6" firstAttribute="leading" secondItem="Hah-nG-GcS" secondAttribute="leading" constant="10" id="4CU-5c-xbs"/>
+                            <constraint firstItem="z69-Nb-IH0" firstAttribute="leading" secondItem="kmg-A1-UmC" secondAttribute="leading" constant="10" id="BKy-0W-trv"/>
+                            <constraint firstItem="Buv-ma-2ue" firstAttribute="trailing" secondItem="kmg-A1-UmC" secondAttribute="trailing" id="Noq-Ee-eql"/>
+                            <constraint firstItem="G6n-KX-RG6" firstAttribute="top" secondItem="kmg-A1-UmC" secondAttribute="top" constant="80" id="Ogi-cb-uLR"/>
+                            <constraint firstItem="kmg-A1-UmC" firstAttribute="bottom" secondItem="AP9-hc-ZTY" secondAttribute="bottom" constant="42" id="QYC-s3-cle"/>
+                            <constraint firstItem="Buv-ma-2ue" firstAttribute="top" secondItem="Hah-nG-GcS" secondAttribute="top" id="SC1-Ab-3M7"/>
+                            <constraint firstItem="cUX-Ds-TBj" firstAttribute="leading" secondItem="kmg-A1-UmC" secondAttribute="leading" constant="60" id="VaP-Rk-b4c"/>
+                            <constraint firstItem="cUX-Ds-TBj" firstAttribute="top" secondItem="kmg-A1-UmC" secondAttribute="top" id="YAu-9S-2xs"/>
+                            <constraint firstItem="kmg-A1-UmC" firstAttribute="trailing" secondItem="G6n-KX-RG6" secondAttribute="trailing" constant="10" id="drj-0j-g4d"/>
+                            <constraint firstItem="AP9-hc-ZTY" firstAttribute="centerX" secondItem="Hah-nG-GcS" secondAttribute="centerX" id="fuh-UY-e1D"/>
+                            <constraint firstItem="kmg-A1-UmC" firstAttribute="bottom" secondItem="G6n-KX-RG6" secondAttribute="bottom" constant="110" id="hQq-v0-RXL"/>
+                            <constraint firstItem="kmg-A1-UmC" firstAttribute="trailing" secondItem="cUX-Ds-TBj" secondAttribute="trailing" constant="60" id="il0-hh-fWQ"/>
+                            <constraint firstItem="z69-Nb-IH0" firstAttribute="top" secondItem="kmg-A1-UmC" secondAttribute="top" constant="19" id="qaV-aB-BfI"/>
+                            <constraint firstItem="Buv-ma-2ue" firstAttribute="leading" secondItem="kmg-A1-UmC" secondAttribute="leading" id="tB0-wA-yOQ"/>
+                            <constraint firstItem="Buv-ma-2ue" firstAttribute="bottom" secondItem="kmg-A1-UmC" secondAttribute="bottom" id="wJv-Pd-A7B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kmg-A1-UmC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2rg-qd-PD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2358.75" y="555.63380281690138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="03" width="2448" height="1632"/>
+        <image name="04" width="1500" height="1015"/>
+        <image name="05" width="1500" height="1002"/>
+        <image name="06" width="2839" height="1893"/>
+        <image name="07" width="2356" height="1584"/>
+        <image name="BackBtn" width="512" height="512"/>
+        <image name="Pause" width="512" height="512"/>
+        <image name="Play" width="512" height="512"/>
+        <image name="speak" width="512" height="512"/>
+    </resources>
+</document>
